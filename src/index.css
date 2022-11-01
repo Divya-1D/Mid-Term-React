@@ -14,12 +14,30 @@ code {
 
 
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.dark-mode {
+  background-color: black;
+}
+
+
+.dark-mode h1 {
+  color: white;
+}
+
+
 .container {
   max-width: 960px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
+  min-height: 100vh;
 }
 
 
@@ -79,4 +97,30 @@ textarea:focus {
   align-items: center;
   justify-content: space-between;
   
+}
+
+
+.delete-icon {
+  cursor: pointer;
+}
+
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: rgb(233, 233, 233);
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.5em;
+}
+
+
+.search input {
+  border: none;
+  background-color: rgb(233, 233, 233);
+}
+
+
+.search input:focus {
+  outline: none;
 }
