@@ -3,36 +3,37 @@ import { nanoid } from "nanoid";
 import NotesList from "./components/NotesList";
 import Search from "./components/Search";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 
 
 const App = () => {
-   const [notes, setNotes] = useState([
-      {
-         id: nanoid(),
-         text: "This is my trial1 note!",
-         date: "1/10/2022",
-      },
-      {
-         id: nanoid(),
-         text: "This is my trial2 note!",
-         date: "19/10/2022",
-      },
-      {
-         id: nanoid(),
-         text: "This is my trial3 note!",
-         date: "30/10/2022",
-      },
-      {
-         id: nanoid(),
-         text: "This is my trial4 note!",
-         date: "31/10/2022",
-      },
-   ]);
+   const [notes, setNotes] = useState([]);
 
    const [searchText, setSearchText] = useState('');
 
    const [darkMode, setDarkMode] = useState(false);
+
+
+
+   useEffect(() => {
+      const getNotes = async () => {
+         const notesFromServer = await fetchNotes()
+         setNotes(notesFromServer)
+         
+      }
+
+      getNotes()
+   }, [])
+
+
+// Fetch Notes
+   const fetchNotes = async () => {
+      const res = await fetch('http://localhost:5000/notes')
+      const data = await res.json()
+
+      return data
+   }
 
 
    useEffect(() => {
@@ -73,6 +74,7 @@ const App = () => {
            <div className={`${darkMode && 'dark-mode'}`}>
 
                    <div className="container">
+                        
                         <Header handleToggleDarkMode={setDarkMode}/>
                         <Search handleSearchNote={setSearchText}/>
                         <NotesList 
@@ -82,6 +84,7 @@ const App = () => {
                              handleAddNote={addNote}
                              handleDeleteNote={deleteNote}
                         />
+                        <Footer />
                    </div>
             </div>
          );

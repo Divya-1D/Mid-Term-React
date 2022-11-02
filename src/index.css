@@ -21,6 +21,7 @@ code {
 }
 
 
+
 .dark-mode {
   background-color: black;
 }
@@ -123,4 +124,10 @@ textarea:focus {
 
 .search input:focus {
   outline: none;
+}
+
+.logo {
+  color: purple;
+  justify-content: center;
+  display: flex;
 }
