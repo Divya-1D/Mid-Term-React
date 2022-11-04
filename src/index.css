@@ -103,6 +103,7 @@ textarea:focus {
 
 .delete-icon {
   cursor: pointer;
+  size: 1.3rem;
 }
 
 

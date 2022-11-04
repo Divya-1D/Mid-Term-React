@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { nanoid } from "nanoid";
 import NotesList from "./components/NotesList";
 import Search from "./components/Search";
 import Header from "./components/Header";
@@ -36,39 +35,36 @@ const App = () => {
    }
 
 
-   useEffect(() => {
-          const savedNotes = JSON.parse(
-               localStorage.getItem('react-notes-app-data')
-          );
-
-          if(savedNotes){
-               setNotes(savedNotes);
-          }
-
-   }, []);
-
-   useEffect(() => {
-          localStorage.setItem('react-notes-app-data', JSON.stringify(notes)
-          );
-   }, [notes]);
-
-
-   const addNote = (text) => {
+   const addNote = async (text) => {
       const date = new Date();
       const newNote = {
-         id: nanoid(),
          text: text, 
          date: date.toLocaleDateString(),
       };
-      const newNotes = [...notes, newNote];
-      setNotes(newNotes);
+      const updatedNotes = await fetch('http://localhost:5000/notes', {
+         method: 'POST',
+         headers:{
+            'content-type': 'application/json',
+         },
+         body: JSON.stringify(newNote)
+      })
+      const lastNote = await updatedNotes.json()
+      setNotes([...notes, lastNote])
    };
 
 
-   const deleteNote = (id) => {
+
+
+   const deleteNote = async (id) => {
+      await fetch(`http://localhost:5000/notes/${id}`, {
+         method: 'DELETE'
+      });
       const newNotes = notes.filter((note) => note.id !== id);
       setNotes(newNotes);
    };
+
+
+
 
    return (
            <div className={`${darkMode && 'dark-mode'}`}>
@@ -78,9 +74,9 @@ const App = () => {
                         <Header handleToggleDarkMode={setDarkMode}/>
                         <Search handleSearchNote={setSearchText}/>
                         <NotesList 
-                             notes={notes.filter((note) => 
+                             notes={notes.filter((note) =>  
                                  note.text.toLowerCase().includes(searchText)
-                             )} 
+                              )} 
                              handleAddNote={addNote}
                              handleDeleteNote={deleteNote}
                         />
