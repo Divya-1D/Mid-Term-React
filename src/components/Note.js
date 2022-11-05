@@ -1,6 +1,6 @@
-import { MdDeleteForever } from 'react-icons/md';
+import { MdDeleteForever, MdRefresh } from 'react-icons/md';
 
-const Note = ({ id, text, date, handleDeleteNote }) => {
+const Note = ({ id, text, date, handleDeleteNote, handleUpdatedText }) => {
     return (
              <div className="note">
                <span>{ text }</span>
@@ -11,6 +11,10 @@ const Note = ({ id, text, date, handleDeleteNote }) => {
                        className='delete-icon' 
                     //    size='1.3em'
                    />
+                   <MdRefresh 
+                       onClick={() => handleUpdatedText(id)}
+                       className='delete-icon'
+                  />
                </div>
               </div>
            );

@@ -107,6 +107,7 @@ textarea:focus {
 }
 
 
+
 .search {
   display: flex;
   align-items: center;
@@ -118,7 +119,8 @@ textarea:focus {
 
 
 .search input {
-  border: none;
+  
+  border: 1px solid red;
   background-color: rgb(233, 233, 233);
 }
 

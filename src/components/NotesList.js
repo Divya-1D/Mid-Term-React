@@ -5,19 +5,21 @@ const NotesList = ({
           notes, 
           handleAddNote, 
           handleDeleteNote,
+          handleUpdatedText,
 }) => {
          return (
                    <div className="notes-list">
-                         {notes.map((note) => (
-                             <Note 
-                                  key={note.id}
-                                  id={note.id} 
-                                  text={note.text} 
-                                  date={note.date} 
-                                  handleDeleteNote={handleDeleteNote}
-                              /> 
-                          ))}
-                          <AddNote handleAddNote={handleAddNote} />
+                        {notes.map((note, index)=> (
+                            <Note 
+                                key={index}
+                                id={note.id} 
+                                text={note.text} 
+                                date={note.date} 
+                                handleDeleteNote={handleDeleteNote}
+                                handleUpdatedText={handleUpdatedText}
+                              />
+                        ))}
+                            <AddNote handleAddNote={handleAddNote} />
                     </div>
                 );
 };
