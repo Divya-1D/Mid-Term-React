@@ -1,6 +1,7 @@
 import Note from './Note';
 import AddNote from './AddNote';
 
+// Functional Component useful for listing the added and saved notes into application, along with id and current date
 const NotesList = ({ 
           notes, 
           handleAddNote, 

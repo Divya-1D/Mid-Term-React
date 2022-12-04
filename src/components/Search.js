@@ -1,10 +1,11 @@
 import { MdSearch } from 'react-icons/md';
 import {useState} from 'react'
 
-
+// Functional Component used to search the saved notes 
 const Search = ({ handleSearchNote, setNotes, searchText }) => {
     const [notesData, setNotesData] = useState([])
     
+// This will filter the notes while on server
     const filteredNotes = (e) => {
         const fetchNotes = async () => {
             const res = await fetch('http://localhost:5000/notes')

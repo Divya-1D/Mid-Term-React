@@ -50,7 +50,7 @@ code {
 
 
 .note.new {
-  background-color: #67d7cc;
+  background-color: #e89eed;
 }
 
 
@@ -58,7 +58,7 @@ code {
 textarea {
   border: none;
   resize: none;
-  background-color: #67d7cc;
+  background-color: #ecb2d4;
 }
 
 
@@ -82,7 +82,7 @@ textarea:focus {
 
 
 .note {
-  background-color: #fef68a;
+  background-color: #f5ed7e;
   border-radius: 10px;
   padding: 1rem;
   min-height: 170px;
@@ -120,7 +120,7 @@ textarea:focus {
 
 .search input {
   
-  border: 1px solid red;
+  border: 1px solid rgb(226, 204, 204);
   background-color: rgb(233, 233, 233);
 }
 
@@ -134,3 +134,4 @@ textarea:focus {
   justify-content: center;
   display: flex;
 }
+

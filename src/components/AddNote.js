@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-
+// Functional Component for adding the notes to the list of notes
 const AddNote = ({ handleAddNote }) => {
     const [noteText, setNoteText] = useState('');
     const characterLimit = 500;
@@ -12,6 +12,7 @@ const AddNote = ({ handleAddNote }) => {
         
     };
 
+// Responsible to save the note 
     const handleSaveClick = () => {
         if(noteText.trim().length > 0) {
             handleAddNote(noteText);

@@ -1,3 +1,23 @@
+### MID-TERM PROJECT
+
+### Name : Divya Panchal
+
+### COMPONENTS
+
+This app includes total of 6 components:
+1.Note
+2.NotesList
+3.Header
+4.Footer
+5.Search
+6.AddNote
+
+### This Notes app connects to API : GET/PUT/POST/DELETE using fetch 
+### It is designed using css/ which is also responsible for making it responsive
+
+App is able to connect to backend and is able to show the list in db.json file while on npm run server
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -13,6 +33,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+
+
 
 ### `npm test`
 
@@ -69,3 +92,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 #Mid-Term-React
+
+
