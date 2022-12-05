@@ -8,8 +8,8 @@ import Search from "./components/Search";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Navbar from "./components/navbar";
-import Home from "./pages/home";
-import About from "./pages/about";
+// import Home from "./pages/home";
+// import About from "./pages/about";
 
 
 
@@ -106,11 +106,12 @@ const App = () => {
                <Navbar />
                   <Routes>
 
-                    <Route exact path="/" component={Home} />
-                    <Route path="/about" component={About} />
-                 
-                  </Routes>
-            
+                    <Route exact path="/" element={
+                    
+                    
+                    
+                    
+                    
                    <div className="container">
                         <Header handleToggleDarkMode={setDarkMode}/>
                         <Search handleSearchNote={setSearchText} setNotes={setNotes}
@@ -123,10 +124,27 @@ const App = () => {
                              handleUpdatedText={handleUpdatedText}
                         />
                         <Footer />
-                     
-                        
-                     
                    </div>
+                    } />
+
+
+                    <Route path="/notes" element={
+                     <>
+                         <NotesList 
+                           searchText={searchText}
+                           notes={notes}
+                           handleAddNote={addNote}
+                           handleDeleteNote={deleteNote}  
+                           handleUpdatedText={handleUpdatedText}
+                         />
+                    </>
+                    }
+                    />
+                       </Routes>
+                 
+               
+                 
+            
                  
             </div>
          );

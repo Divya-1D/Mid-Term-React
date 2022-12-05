@@ -23,9 +23,9 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     textDecoration: "none",
-    color: "white",
+    color: "primary",
     fontSize: "20px",
-    marginLeft: theme.spacing(20),
+    marginLeft: theme.spacing(5),
     "&:hover": {
       color: "yellow",
       borderBottom: "1px solid white",
@@ -39,11 +39,11 @@ function Navbar() {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" color="purple">
       <CssBaseline />
       <Toolbar>
         <Typography variant="h4" className={classes.logo}>
-          Navbar
+          NOTESSS
         </Typography>
         {isMobile ? (
           <DrawerComponent />
@@ -52,8 +52,8 @@ function Navbar() {
             <Link to="/" className={classes.link}>
               Home
             </Link>
-            <Link to="/about" className={classes.link}>
-              About
+            <Link to="/notes" className={classes.link}>
+              Saved Notes
             </Link>
           </div>
         )}

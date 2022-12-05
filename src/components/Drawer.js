@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {
-    // Divider,
+    Divider,
   Drawer,
   IconButton,
   List,
@@ -15,7 +15,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 const useStyles = makeStyles(()=>({
     link:{
         textDecoration:"none",
-        color: "blue",
+        color: "Primary",
         fontSize: "20px",
     },
     icon:{
@@ -38,11 +38,13 @@ function DrawerComponent() {
                           <Link to="/" className={classes.link}>Home</Link>
                        </ListItemText>
                       </ListItem>
+                      <Divider />
                       <ListItem onClick={() => setOpenDrawer(false)}>
                         <ListItemText>
-                           <Link to="/about" className={classes.link}>About</Link>
+                           <Link to="/notes" className={classes.link}>Saved Notes</Link>
                         </ListItemText>
                       </ListItem>
+                      <Divider/>
                     </List>
                  </Drawer>
                 <IconButton onClick={() => setOpenDrawer(!openDrawer)} className={classes.link}>

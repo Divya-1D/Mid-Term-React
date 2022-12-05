@@ -1,6 +1,12 @@
+import React from "react";
 import { Typography } from "@material-ui/core";
 
 function Home() {
-  return <Typography>This is the homepage</Typography>;
+  return (
+  <Typography>
+
+  </Typography>
+  );
+
 }
 export default Home;
