@@ -1,4 +1,4 @@
-### MID-TERM PROJECT
+### MID-TERM PROJECT and Final Project
 
 ### Name : Divya Panchal
 
@@ -29,6 +29,7 @@ That basically navigates to the page : Home and Saved Notes
 
 ### 2 more components are added to the project namely : Navbar and Drawer
 ### And 2 pages for giving the routes to the application 
+### Few styling are giving by material UI
 
 
 # Getting Started with Create React App

@@ -4,7 +4,7 @@ import { Typography } from "@material-ui/core";
 function Home() {
   return (
   <Typography>
-
+    <Link to='/'></Link>
   </Typography>
   );
 

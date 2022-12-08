@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// Importing material ui cores to use them in app
 import {
     Divider,
   Drawer,
@@ -8,8 +9,10 @@ import {
   ListItemText,
   makeStyles,
 } from "@material-ui/core";
+
 import { Link } from "react-router-dom";
 
+// Menyicon used while screen size changes to lesser like a mobile view
 import MenuIcon from "@material-ui/icons/Menu";
 
 const useStyles = makeStyles(()=>({
@@ -23,6 +26,9 @@ const useStyles = makeStyles(()=>({
     }
 }));
 
+
+// Functional Component used for setting up a drawer which contains Home and Saved Notes
+//  And routes to a link when onclicked
 function DrawerComponent() {
     const classes = useStyles();
       const [openDrawer, setOpenDrawer] = useState(false);

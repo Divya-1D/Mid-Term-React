@@ -9,9 +9,12 @@ import {
   useTheme,
   useMediaQuery,
 } from "@material-ui/core";
+
 import { Link } from "react-router-dom";
 import DrawerComponent from "./Drawer";
 
+
+// Styles given using material UI
 const useStyles = makeStyles((theme) => ({
   navlinks: {
     marginLeft: theme.spacing(10),
@@ -32,6 +35,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+
+// function responsible for giving all the required routes and stylings
 
 function Navbar() {
   const classes = useStyles();
