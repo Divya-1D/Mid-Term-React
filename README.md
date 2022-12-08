@@ -4,18 +4,31 @@
 
 ### COMPONENTS
 
-This app includes total of 6 components:
+This app includes total of 8 components:
 1.Note
 2.NotesList
 3.Header
 4.Footer
 5.Search
 6.AddNote
+7.Navbar
+8.Drawer
+
 
 ### This Notes app connects to API : GET/PUT/POST/DELETE using fetch 
 ### It is designed using css/ which is also responsible for making it responsive
 
 App is able to connect to backend and is able to show the list in db.json file while on npm run server
+
+
+
+### As a part of final project requirement 
+
+Navbar is added using "Material UI"
+That basically navigates to the page : Home and Saved Notes 
+
+### 2 more components are added to the project namely : Navbar and Drawer
+### And 2 pages for giving the routes to the application 
 
 
 # Getting Started with Create React App
