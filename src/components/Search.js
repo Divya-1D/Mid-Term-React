@@ -1,7 +1,9 @@
-import { MdSearch } from 'react-icons/md';
+import React from 'react';
+// import { MdSearch } from 'react-icons/md';
+import SearchIcon from '@mui/icons-material/Search';
 import {useState} from 'react'
 
-// Functional Component used to search the saved notes 
+//Functional Component used to search the saved notes 
 const Search = ({ handleSearchNote, setNotes, searchText }) => {
     const [notesData, setNotesData] = useState([])
     
@@ -37,7 +39,7 @@ const Search = ({ handleSearchNote, setNotes, searchText }) => {
     return (
 
              <div className="search">
-                  <MdSearch className="search-icons" size='1.3rem' />
+                  <SearchIcon className="search-icons" size='1.3rem' />
                   <input 
                         value={searchText}
                         onChange={onChange}

@@ -2,12 +2,14 @@
 import { useState, useEffect } from "react";
 import {  Route, Routes } from "react-router-dom";
 
+
 //components import
 import NotesList from "./components/NotesList";
 import Search from "./components/Search";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Navbar from "./components/navbar";
+import Add from "./components/Add";
 // import Home from "./pages/home";
 // import About from "./pages/about";
 
@@ -93,35 +95,20 @@ const App = () => {
       note.id === id ? {...note, text: UpNote.text} : note ))
    }
 
-
    
 // Renders the components
    return (
            <div className={`${darkMode && 'dark-mode'}`}>
-           
-         
-
-
            
                <Navbar />
                   <Routes>
 
                     <Route exact path="/" element={
                     
-                    
-                    
-                    
-                    
                    <div className="container">
                         <Header handleToggleDarkMode={setDarkMode}/>
-                        <Search handleSearchNote={setSearchText} setNotes={setNotes}
-                         searchText={searchText}/>
-                        <NotesList 
-                             searchText={searchText}
-                             notes={notes}
-                             handleAddNote={addNote}
-                             handleDeleteNote={deleteNote}  
-                             handleUpdatedText={handleUpdatedText}
+                        <Add 
+                            handleAddNote={addNote}
                         />
                         <Footer />
                    </div>
@@ -130,22 +117,19 @@ const App = () => {
 
                     <Route path="/notes" element={
                      <>
+                        <Search handleSearchNote={setSearchText} setNotes={setNotes}
+                           searchText={searchText}/>
                          <NotesList 
                            searchText={searchText}
                            notes={notes}
-                           handleAddNote={addNote}
+                           // handleAddNote={addNote}
                            handleDeleteNote={deleteNote}  
                            handleUpdatedText={handleUpdatedText}
                          />
                     </>
                     }
                     />
-                       </Routes>
-                 
-               
-                 
-            
-                 
+                   </Routes>
             </div>
          );
 };

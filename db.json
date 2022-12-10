@@ -1,22 +1,7 @@
 {
   "notes": [
     {
-      "text": "THis are my list of notes:\n\n\nDemo Tommorrow\n\nMid term Exams",
-      "date": "5/11/2022",
-      "id": 27
-    },
-    {
-      "text": "Hello , from Montreal",
-      "date": "6/11/2022",
-      "id": 30
-    },
-    {
-      "text": "Good Afternoon sir",
-      "date": "6/11/2022",
-      "id": 31
-    },
-    {
-      "text": "About Page is working Yay!!!!",
+      "text": "The Material Icon Added Here",
       "date": "4/12/2022",
       "id": 33
     },
@@ -26,57 +11,35 @@
       "id": 34
     },
     {
-      "text": "Hello hii \n\nAgain ",
-      "date": "8/12/2022",
-      "id": 35
-    },
-    {
+      "text": "Icons Added\n",
+      "date": "10/12/2022",
       "id": 36
     },
     {
-      "id": 37
-    },
-    {
-      "id": 38
-    },
-    {
+      "text": "We can add notes from here",
+      "date": "12/10/2022",
       "id": 39
     },
     {
       "id": 40
     },
     {
+      "text": "JSK",
+      "date": "10/12/2022",
       "id": 41
     },
     {
       "id": 42
     },
     {
+      "text": "Hi it is test again",
+      "date": "12/08/2022",
       "id": 43
     },
     {
+      "text": "Hi it is test again",
+      "date": "12/08/2022",
       "id": 44
-    },
-    {
-      "id": 45
-    },
-    {
-      "id": 46
-    },
-    {
-      "id": 47
-    },
-    {
-      "id": 48
-    },
-    {
-      "id": 49
-    },
-    {
-      "id": 50
-    },
-    {
-      "id": 51
     }
   ]
 }

@@ -1,5 +1,8 @@
-// Icons import for delete and refresh
-import { MdDeleteForever, MdRefresh } from 'react-icons/md';
+// MUI Icons import for delete and refresh
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import UpdateRoundedIcon from '@mui/icons-material/UpdateRounded';
+
+
 
 // Functional Component used for handling the note status
 const Note = ({ id, text, date, handleDeleteNote, handleUpdatedText }) => {
@@ -9,13 +12,14 @@ const Note = ({ id, text, date, handleDeleteNote, handleUpdatedText }) => {
                <div className="note-footer">
                   <small>{ date }</small>
                   
-                  <MdDeleteForever 
+                  <DeleteForeverIcon
                        onClick={() => handleDeleteNote(id)}
-                       className='delete-icon' 
+                       className='material-icons' 
                    />
-                   <MdRefresh 
+                
+                   <UpdateRoundedIcon
                        onClick={() => handleUpdatedText(id)}
-                       className='delete-icon'
+                       className='material-icons'
                   />
                </div>
               </div>

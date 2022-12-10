@@ -101,9 +101,15 @@ textarea:focus {
 }
 
 
-.delete-icon {
+
+.material-icons { 
+  font-size: 20px;
   cursor: pointer;
-  size: 1.3rem;
+ }
+
+
+.material-icons:hover {
+  color: blue;
 }
 
 
@@ -114,15 +120,23 @@ textarea:focus {
   background-color: rgb(233, 233, 233);
   border-radius: 10px;
   padding: 5px;
-  margin-bottom: 1.5em;
+  margin-bottom: 3.75em;
+  
+}
+
+
+.search-icons:hover {
+  color: blue;
+  font-size: 50px;
 }
 
 
 .search input {
-  
-  border: 1px solid rgb(226, 204, 204);
+  height: 50px;
+  border: none;
   background-color: rgb(233, 233, 233);
-}
+  width: 100%;
+} 
 
 
 .search input:focus {
